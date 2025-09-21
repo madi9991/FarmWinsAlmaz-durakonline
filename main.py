@@ -5,13 +5,13 @@ from durakonline import durakonline
 from secrets import token_hex
 from datetime import datetime
 
-MAIN_TOKEN: str = ""  # токен от аккаунта который выигрывает
-BOT_TOKEN: str = ""  # токен от аккаунта который проигрывает
-COUNT: int = 100
+MAIN_TOKEN: str = "$2a$06$raZeTda./ZF4XD2o6QQOpu"  # токен от аккаунта который выигрывает
+BOT_TOKEN: str = "$2a$06$Y4Y37s4sSH9aRQctyMl6oO"  # токен от аккаунта который проигрывает
+COUNT: int = 900а
 
 DEBUG_MODE: bool = False
 SERVERS: [] = [
-    "u0"
+    "u1"
 ]
 
 class Almaz:
@@ -26,7 +26,7 @@ class Almaz:
     def start_game(self, main, bot, server_id: str, count: int = 1000):
         self.games += 1
         self.log("Create 1 thread", f"{server_id}")
-        game = bot.game.create(10000, "1", 2, 52)
+        game = bot.game.create(100, "1", 2, 52)  # ставка 100
         main.game.join("1", game.id)
         main._get_data("game")
         for i in range(count):
