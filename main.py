@@ -7,7 +7,7 @@ from datetime import datetime
 
 MAIN_TOKEN: str = "$2a$06$raZeTda./ZF4XD2o6QQOpu"  # токен от аккаунта который выигрывает
 BOT_TOKEN: str = "$2a$06$Y4Y37s4sSH9aRQctyMl6oO"  # токен от аккаунта который проигрывает
-COUNT: int = 900а
+COUNT: int = 4500 
 
 DEBUG_MODE: bool = False
 SERVERS: [] = [
